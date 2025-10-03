@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gaming Talent Test Project
 
-## Getting Started
+## 📌 Overview
 
-First, run the development server:
+This project is a **web-based application** designed to measure and train gaming-related skills. It provides a collection of scientifically inspired mini-games that assess reaction speed, visual tracking, memory, focus, and motor precision. The platform can be used by gamers, esports teams, and enthusiasts who want to benchmark and improve their performance.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Objectives
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Offer accurate, engaging, and repeatable tests for core gaming abilities.  
+- Provide clear performance metrics and leaderboards.  
+- Enable progress tracking over time.  
+- Create a modular framework to add new tests easily.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Gaming Talent Test Catalog
 
-To learn more about Next.js, take a look at the following resources:
+This document organizes common tests for gaming-related skills such as reaction speed, vision, cognition, and motor control.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🎯 Core Reaction & Reflex Tests
 
-## Deploy on Vercel
+1. **Simple Reaction Time Test**
+   - A stimulus (light/sound/shape) appears; user must click/tap as fast as possible.  
+   - **Measures:** raw reflex speed.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Choice Reaction Time Test**
+   - Multiple possible stimuli, each with a specific response (e.g., red = left click, blue = right click).  
+   - **Measures:** decision + reaction speed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Go/No-Go Test**
+   - Respond to “go” stimuli but ignore “no-go” ones.  
+   - **Measures:** reflex inhibition & selective attention.
+
+---
+
+### 👀 Visual & Spatial Tests
+
+4. **Dynamic Visual Acuity Test**
+   - Identify or track moving objects at different speeds.  
+   - **Measures:** eye tracking & vision sharpness under motion.
+
+5. **Multiple Object Tracking (MOT)**
+   - Track several moving objects among distractors.  
+   - **Measures:** attention spread & situational awareness.
+
+6. **Peripheral Vision Test**
+   - Detect cues or symbols appearing at the edge of the screen.  
+   - **Measures:** field of view & awareness.
+
+---
+
+### 🧠 Cognitive & Memory Tests
+
+7. **Working Memory (N-back, Sequence Recall)**
+   - Remember and update positions/colors as they appear.  
+   - **Measures:** short-term memory under pressure.
+
+8. **Pattern Recognition / Predictive Anticipation**
+   - Predict next move of a moving object (like a ball trajectory).  
+   - **Measures:** game sense & anticipation.
+
+---
+
+### 🎮 Motor Control & Precision
+
+9. **Aim Accuracy Test**
+   - Click/tap on targets appearing randomly on the screen.  
+   - Variants: static targets, moving targets, shrinking targets.  
+   - **Measures:** hand-eye coordination & accuracy.
+
+10. **Tracking Test**
+
+- Keep crosshair/cursor on a moving target.  
+- **Measures:** fine motor control & sustained focus.
+
+11. **Click Speed / Tapping Test**
+
+- Max clicks in a set time.  
+- **Measures:** finger dexterity & stamina.
+
+---
+
+### ⚡ Multitasking & Focus
+
+12. **Dual Task Reaction Test**
+
+- Combine two challenges (e.g., press for visual stimulus while solving math).  
+- **Measures:** divided attention.
+
+13. **Stroop Test (Cognitive Control)**
+
+- Example: word "RED" written in blue, respond by color not word.  
+- **Measures:** conflict resolution & focus.
+
+---
+
+### 📊 Advanced Metrics (Optional for Gamers)
+
+- **Fatigue Test**: Performance drop after many repetitions.  
+- **Adaptation Test**: How quickly performance improves with repeated attempts.  
+- **Stress Simulation**: Tests under time pressure, flashing distractions, or noise.
+
+---
+
+## 🏗️ Tech Stack
+
+- **Frontend:** Next.js, React (Vite + TypeScript), TailwindCSS  
+- **Rendering:** Canvas API / WebGL for test loops  
+- **State Management:** Zustand/Jotai for lightweight global state  
+- **Backend (optional):** Next.js + PostgreSQL (for scores, users, leaderboards)  
+- **Deployment:** Vercel, Netlify, or Docker-based self-hosting  
+
+---
+
+## ⚡ Performance Considerations
+
+- Use `requestAnimationFrame` for test loops to ensure frame accuracy.  
+- Record time with `performance.now()` for millisecond precision.  
+- Avoid React state updates every frame — batch updates periodically.  
+- Calibrate for refresh rates (60Hz, 120Hz, 144Hz, etc.).  
+
+---
+
+## 📊 Features
+
+- User profiles with history tracking  
+- Global and friend leaderboards  
+- Difficulty scaling for tests  
+- Mobile and desktop support  
+- Exportable results (CSV, JSON, PDF reports)  
+
+---
+
+## 🚀 Future Extensions
+
+- AI-based performance analysis and personalized training suggestions  
+- Integration with esports teams and training platforms  
+- Multiplayer competitive testing mode  
+- VR/AR support for immersive testing  
+
+---
